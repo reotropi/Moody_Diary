@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		447FCEDB1EBD63D800567F73 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FCEDA1EBD63D800567F73 /* WriteViewController.swift */; };
+		44E5ED181EB4585A005D01BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ED171EB4585A005D01BC /* AppDelegate.swift */; };
+		44E5ED1D1EB4585A005D01BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E5ED1B1EB4585A005D01BC /* Main.storyboard */; };
+		44E5ED201EB4585A005D01BC /* MoodyDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ED1E1EB4585A005D01BC /* MoodyDiary.xcdatamodeld */; };
+		44E5ED221EB4585A005D01BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44E5ED211EB4585A005D01BC /* Assets.xcassets */; };
+		44E5ED251EB4585A005D01BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E5ED231EB4585A005D01BC /* LaunchScreen.storyboard */; };
+		44E5ED2D1EB4592A005D01BC /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ED2C1EB4592A005D01BC /* StartViewController.swift */; };
+		44E5ED2F1EB45AF5005D01BC /* MoodPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ED2E1EB45AF5005D01BC /* MoodPickerView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		447FCEDA1EBD63D800567F73 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		44E5ED141EB4585A005D01BC /* MoodyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44E5ED171EB4585A005D01BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44E5ED1C1EB4585A005D01BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44E5ED1F1EB4585A005D01BC /* MoodyDiary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoodyDiary.xcdatamodel; sourceTree = "<group>"; };
+		44E5ED211EB4585A005D01BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44E5ED241EB4585A005D01BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44E5ED261EB4585A005D01BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44E5ED2C1EB4592A005D01BC /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		44E5ED2E1EB45AF5005D01BC /* MoodPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodPickerView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44E5ED111EB4585A005D01BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		44E5ED0B1EB4585A005D01BC = {
+			isa = PBXGroup;
+			children = (
+				44E5ED161EB4585A005D01BC /* MoodyDiary */,
+				44E5ED151EB4585A005D01BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		44E5ED151EB4585A005D01BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44E5ED141EB4585A005D01BC /* MoodyDiary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44E5ED161EB4585A005D01BC /* MoodyDiary */ = {
+			isa = PBXGroup;
+			children = (
+				44E5ED2C1EB4592A005D01BC /* StartViewController.swift */,
+				44E5ED171EB4585A005D01BC /* AppDelegate.swift */,
+				44E5ED1B1EB4585A005D01BC /* Main.storyboard */,
+				447FCEDA1EBD63D800567F73 /* WriteViewController.swift */,
+				44E5ED2E1EB45AF5005D01BC /* MoodPickerView.swift */,
+				44E5ED211EB4585A005D01BC /* Assets.xcassets */,
+				44E5ED231EB4585A005D01BC /* LaunchScreen.storyboard */,
+				44E5ED261EB4585A005D01BC /* Info.plist */,
+				44E5ED1E1EB4585A005D01BC /* MoodyDiary.xcdatamodeld */,
+			);
+			path = MoodyDiary;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44E5ED131EB4585A005D01BC /* MoodyDiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44E5ED291EB4585A005D01BC /* Build configuration list for PBXNativeTarget "MoodyDiary" */;
+			buildPhases = (
+				44E5ED101EB4585A005D01BC /* Sources */,
+				44E5ED111EB4585A005D01BC /* Frameworks */,
+				44E5ED121EB4585A005D01BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MoodyDiary;
+			productName = MoodyDiary;
+			productReference = 44E5ED141EB4585A005D01BC /* MoodyDiary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44E5ED0C1EB4585A005D01BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = IS535;
+				TargetAttributes = {
+					44E5ED131EB4585A005D01BC = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 44E5ED0F1EB4585A005D01BC /* Build configuration list for PBXProject "MoodyDiary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44E5ED0B1EB4585A005D01BC;
+			productRefGroup = 44E5ED151EB4585A005D01BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44E5ED131EB4585A005D01BC /* MoodyDiary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44E5ED121EB4585A005D01BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44E5ED251EB4585A005D01BC /* LaunchScreen.storyboard in Resources */,
+				44E5ED221EB4585A005D01BC /* Assets.xcassets in Resources */,
+				44E5ED1D1EB4585A005D01BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44E5ED101EB4585A005D01BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44E5ED201EB4585A005D01BC /* MoodyDiary.xcdatamodeld in Sources */,
+				44E5ED181EB4585A005D01BC /* AppDelegate.swift in Sources */,
+				44E5ED2D1EB4592A005D01BC /* StartViewController.swift in Sources */,
+				447FCEDB1EBD63D800567F73 /* WriteViewController.swift in Sources */,
+				44E5ED2F1EB45AF5005D01BC /* MoodPickerView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		44E5ED1B1EB4585A005D01BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44E5ED1C1EB4585A005D01BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		44E5ED231EB4585A005D01BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44E5ED241EB4585A005D01BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44E5ED271EB4585A005D01BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44E5ED281EB4585A005D01BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44E5ED2A1EB4585A005D01BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MoodyDiary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = reoIS535.MoodyDiary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		44E5ED2B1EB4585A005D01BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MoodyDiary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = reoIS535.MoodyDiary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44E5ED0F1EB4585A005D01BC /* Build configuration list for PBXProject "MoodyDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44E5ED271EB4585A005D01BC /* Debug */,
+				44E5ED281EB4585A005D01BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44E5ED291EB4585A005D01BC /* Build configuration list for PBXNativeTarget "MoodyDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44E5ED2A1EB4585A005D01BC /* Debug */,
+				44E5ED2B1EB4585A005D01BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		44E5ED1E1EB4585A005D01BC /* MoodyDiary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				44E5ED1F1EB4585A005D01BC /* MoodyDiary.xcdatamodel */,
+			);
+			currentVersion = 44E5ED1F1EB4585A005D01BC /* MoodyDiary.xcdatamodel */;
+			path = MoodyDiary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 44E5ED0C1EB4585A005D01BC /* Project object */;
+}

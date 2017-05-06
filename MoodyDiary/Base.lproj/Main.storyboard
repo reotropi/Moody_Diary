@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="264-hf-iTY">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="MoodyDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zgz-fP-lmc" customClass="MoodPickerView" customModule="MoodyDiary" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="vza-0y-R3J"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="HMB-Ir-fw2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eyM-5J-CN8"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is your current mood?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvx-BW-o2u">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="akI-i8-f5A"/>
+                                    <constraint firstAttribute="width" constant="212" id="bku-Tl-a7a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5b-L8-0jb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="mLj-Ca-p2O"/>
+                                    <constraint firstAttribute="width" constant="46" id="pqS-aD-NRc"/>
+                                </constraints>
+                                <state key="normal" title="READ">
+                                    <color key="titleColor" red="1" green="0.45649902889999999" blue="0.070161430499999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukE-pk-D70">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="B28-vl-WAO"/>
+                                    <constraint firstAttribute="width" constant="46" id="LaV-kx-MKe"/>
+                                </constraints>
+                                <state key="normal" title="WRITE">
+                                    <color key="titleColor" red="1" green="0.14471377399999999" blue="0.125740294" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="writeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JCP-8b-lkZ"/>
+                                    <segue destination="Exu-9X-Mhy" kind="presentation" identifier="writeSegue" id="IKL-zV-dV5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moody Diary" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgd-XH-buL">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="d9x-Dq-GtN"/>
+                                    <constraint firstAttribute="width" constant="179" id="vRy-Vf-d2Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="33"/>
+                                <color key="textColor" red="1" green="0.4253656575002559" blue="0.93344376653884775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89729830265259536" green="1" blue="0.77228336595992775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ukE-pk-D70" firstAttribute="top" secondItem="zgz-fP-lmc" secondAttribute="bottom" constant="20" id="9Vp-iZ-KsF"/>
+                            <constraint firstItem="fgd-XH-buL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="EyB-bn-DZZ"/>
+                            <constraint firstItem="dvx-BW-o2u" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GCd-B7-0Ys"/>
+                            <constraint firstItem="dvx-BW-o2u" firstAttribute="top" secondItem="fgd-XH-buL" secondAttribute="bottom" constant="85" id="I9M-j3-Yab"/>
+                            <constraint firstItem="X5b-L8-0jb" firstAttribute="top" secondItem="ukE-pk-D70" secondAttribute="bottom" constant="8" id="QQE-3e-Xo6"/>
+                            <constraint firstItem="ukE-pk-D70" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TeU-Fd-E7t"/>
+                            <constraint firstItem="zgz-fP-lmc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UTz-YX-zWM"/>
+                            <constraint firstItem="X5b-L8-0jb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cx1-1h-Ecj"/>
+                            <constraint firstItem="fgd-XH-buL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eY8-F5-81P"/>
+                            <constraint firstAttribute="trailing" secondItem="zgz-fP-lmc" secondAttribute="trailing" id="wcQ-gI-YRW"/>
+                            <constraint firstItem="zgz-fP-lmc" firstAttribute="top" secondItem="dvx-BW-o2u" secondAttribute="bottom" constant="40" id="yyU-Hy-Vcy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="klz-w7-9BU"/>
+                    <connections>
+                        <outlet property="moodPicker" destination="zgz-fP-lmc" id="p1c-kl-KkK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
+        <!--Write View Controller-->
+        <scene sceneID="uNf-0i-qFI">
+            <objects>
+                <viewController id="Exu-9X-Mhy" customClass="WriteViewController" customModule="MoodyDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1u7-1w-g5s"/>
+                        <viewControllerLayoutGuide type="bottom" id="rz6-f1-Ju6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="viv-PC-fyb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IUM-79-OQF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="126" id="wfv-uS-mm9"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="515727592.13195097">
+                                    <!--2017-05-06 01:39:52 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-347115600">
+                                    <!--1990-01-01 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Story-" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3Dc-Ki-O2b">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2z-XT-Szt">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="JzQ-il-8S7"/>
+                                    <constraint firstAttribute="height" constant="30" id="WEu-LR-htA"/>
+                                </constraints>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="1" green="0.42536565749999999" blue="0.93344376650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fo4-Ne-6gq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7ML-5E-6gY"/>
+                                    <constraint firstAttribute="width" constant="46" id="yeL-cV-bw4"/>
+                                </constraints>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" red="1" green="0.14471377399999999" blue="0.125740294" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="Exu-9X-Mhy" eventType="touchUpInside" id="EVW-2q-8Ga"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MoodTemp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vd-e6-QaY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="NBd-AU-NPD"/>
+                                    <constraint firstAttribute="height" constant="52" id="Pcb-gm-BVU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97132762463474898" green="0.95446724806558259" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IUM-79-OQF" firstAttribute="top" secondItem="7Vd-e6-QaY" secondAttribute="bottom" constant="8" id="0WL-b4-i8N"/>
+                            <constraint firstItem="D2z-XT-Szt" firstAttribute="top" secondItem="3Dc-Ki-O2b" secondAttribute="bottom" constant="8" id="5QZ-hY-Cwx"/>
+                            <constraint firstItem="7Vd-e6-QaY" firstAttribute="top" secondItem="1u7-1w-g5s" secondAttribute="bottom" constant="8" id="5SU-xq-zEG"/>
+                            <constraint firstItem="fo4-Ne-6gq" firstAttribute="top" secondItem="1u7-1w-g5s" secondAttribute="bottom" constant="19" id="8AY-qK-FmM"/>
+                            <constraint firstItem="IUM-79-OQF" firstAttribute="leading" secondItem="viv-PC-fyb" secondAttribute="leading" id="CsH-UD-hl5"/>
+                            <constraint firstItem="3Dc-Ki-O2b" firstAttribute="centerX" secondItem="viv-PC-fyb" secondAttribute="centerX" id="T2D-fP-AtB"/>
+                            <constraint firstItem="3Dc-Ki-O2b" firstAttribute="leading" secondItem="viv-PC-fyb" secondAttribute="leadingMargin" id="W25-1I-Jav"/>
+                            <constraint firstItem="fo4-Ne-6gq" firstAttribute="leading" secondItem="viv-PC-fyb" secondAttribute="leadingMargin" id="Woi-fu-D1p"/>
+                            <constraint firstAttribute="trailing" secondItem="IUM-79-OQF" secondAttribute="trailing" id="c4J-SB-DJL"/>
+                            <constraint firstItem="IUM-79-OQF" firstAttribute="centerX" secondItem="viv-PC-fyb" secondAttribute="centerX" id="hJe-sf-mWi"/>
+                            <constraint firstItem="IUM-79-OQF" firstAttribute="top" secondItem="fo4-Ne-6gq" secondAttribute="bottom" constant="19" id="pC4-Xj-gee"/>
+                            <constraint firstItem="3Dc-Ki-O2b" firstAttribute="top" secondItem="IUM-79-OQF" secondAttribute="bottom" constant="8" id="pXo-Ax-GkL"/>
+                            <constraint firstItem="7Vd-e6-QaY" firstAttribute="centerX" secondItem="viv-PC-fyb" secondAttribute="centerX" id="rkz-yd-BaB"/>
+                            <constraint firstItem="3Dc-Ki-O2b" firstAttribute="trailing" secondItem="viv-PC-fyb" secondAttribute="trailingMargin" id="wMq-aI-WuY"/>
+                            <constraint firstItem="rz6-f1-Ju6" firstAttribute="top" secondItem="D2z-XT-Szt" secondAttribute="bottom" constant="20" id="zCJ-4p-QRC"/>
+                            <constraint firstItem="D2z-XT-Szt" firstAttribute="centerX" secondItem="viv-PC-fyb" secondAttribute="centerX" id="zoY-r3-PXN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moodTempLabel" destination="7Vd-e6-QaY" id="l8w-mO-vwf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axs-OT-2Td" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1640.8" y="36.431784107946029"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZfX-3t-iRb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="264-hf-iTY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8xQ-oE-35g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="os8-lJ-KOB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RWN-rQ-QYR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="311" y="37"/>
+        </scene>
+    </scenes>
+</document>
