@@ -45,6 +45,9 @@
                                 <state key="normal" title="READ">
                                     <color key="titleColor" red="1" green="0.45649902889999999" blue="0.070161430499999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="readButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K6J-Hy-ZT3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukE-pk-D70">
                                 <constraints>
@@ -87,11 +90,83 @@
                     <navigationItem key="navigationItem" id="klz-w7-9BU"/>
                     <connections>
                         <outlet property="moodPicker" destination="zgz-fP-lmc" id="p1c-kl-KkK"/>
+                        <segue destination="Xfx-EL-Duf" kind="show" identifier="readSegue" id="gCT-gm-FUi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="972" y="37.331334332833585"/>
+        </scene>
+        <!--Read View Controller-->
+        <scene sceneID="ca8-ZF-FSs">
+            <objects>
+                <viewController id="Xfx-EL-Duf" customClass="ReadViewController" customModule="MoodyDiary" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZP7-Ea-eeT"/>
+                        <viewControllerLayoutGuide type="bottom" id="CE4-1V-ppv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UkC-LO-RzZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IuV-9D-eAZ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="StoryCell" id="flc-PX-VlA" customClass="StoryTableViewCell" customModule="MoodyDiary" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="flc-PX-VlA" id="9kf-4G-0Uw">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwK-sg-PIO">
+                                                    <frame key="frameInset" minX="31" width="314" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="storyLabel" destination="qwK-sg-PIO" id="FgH-JF-5it"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xfx-EL-Duf" id="VeW-A1-VJN"/>
+                                    <outlet property="delegate" destination="Xfx-EL-Duf" id="kNB-l4-6pz"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MoodTemp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBL-GK-6fn">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ArH-Ds-5Oy"/>
+                                    <constraint firstAttribute="width" constant="206" id="gye-Ra-D0f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IuV-9D-eAZ" firstAttribute="leading" secondItem="UkC-LO-RzZ" secondAttribute="leading" id="EOY-ps-SN8"/>
+                            <constraint firstItem="FBL-GK-6fn" firstAttribute="centerX" secondItem="UkC-LO-RzZ" secondAttribute="centerX" id="Fba-EF-jh0"/>
+                            <constraint firstAttribute="trailing" secondItem="IuV-9D-eAZ" secondAttribute="trailing" id="LvH-D3-vab"/>
+                            <constraint firstItem="CE4-1V-ppv" firstAttribute="top" secondItem="IuV-9D-eAZ" secondAttribute="bottom" id="crS-2P-jum"/>
+                            <constraint firstItem="IuV-9D-eAZ" firstAttribute="centerX" secondItem="UkC-LO-RzZ" secondAttribute="centerX" id="f64-Yg-xIl"/>
+                            <constraint firstItem="IuV-9D-eAZ" firstAttribute="top" secondItem="FBL-GK-6fn" secondAttribute="bottom" id="hGI-Av-387"/>
+                            <constraint firstItem="FBL-GK-6fn" firstAttribute="top" secondItem="ZP7-Ea-eeT" secondAttribute="bottom" constant="8" id="rOy-Qb-RKQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moodLabel" destination="FBL-GK-6fn" id="IKd-Hy-8Kt"/>
+                        <outlet property="readTable" destination="IuV-9D-eAZ" id="UGt-T9-1kb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVm-xg-XLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="728.18590704647681"/>
         </scene>
         <!--Write View Controller-->
         <scene sceneID="uNf-0i-qFI">

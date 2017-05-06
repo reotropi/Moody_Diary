@@ -44,10 +44,21 @@ class StartViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         
     }
     
+    @IBAction func readButtonPressed(_ sender: AnyObject) {
+        
+        performSegue(withIdentifier: "readSegue", sender: nil)
+        
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let a = segue.destination as? WriteViewController {
+        if segue.identifier == "writeSegue" {
+        let a = segue.destination as! WriteViewController
         a.moodTemp = moodPass
         }
+            else {
+                let b = segue.destination as!ReadViewController
+                b.moodTemp = moodPass
+            }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
