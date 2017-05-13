@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440BB9DB1EC6B0B20056B5F9 /* StoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440BB9DA1EC6B0B20056B5F9 /* StoryDetailsViewController.swift */; };
 		447FCEDB1EBD63D800567F73 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FCEDA1EBD63D800567F73 /* WriteViewController.swift */; };
 		447FCEE71EBD8F7300567F73 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FCEE61EBD8F7300567F73 /* ReadViewController.swift */; };
 		447FCEE91EBD90F600567F73 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FCEE81EBD90F600567F73 /* StoryTableViewCell.swift */; };
+		447FCEEF1EBD999F00567F73 /* Story+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FCEED1EBD999F00567F73 /* Story+CoreDataClass.swift */; };
+		447FCEF01EBD999F00567F73 /* Story+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FCEEE1EBD999F00567F73 /* Story+CoreDataProperties.swift */; };
 		44E5ED181EB4585A005D01BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ED171EB4585A005D01BC /* AppDelegate.swift */; };
 		44E5ED1D1EB4585A005D01BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E5ED1B1EB4585A005D01BC /* Main.storyboard */; };
 		44E5ED201EB4585A005D01BC /* MoodyDiary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ED1E1EB4585A005D01BC /* MoodyDiary.xcdatamodeld */; };
@@ -20,9 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440BB9DA1EC6B0B20056B5F9 /* StoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryDetailsViewController.swift; sourceTree = "<group>"; };
 		447FCEDA1EBD63D800567F73 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		447FCEE61EBD8F7300567F73 /* ReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		447FCEE81EBD90F600567F73 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
+		447FCEED1EBD999F00567F73 /* Story+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Story+CoreDataClass.swift"; sourceTree = "<group>"; };
+		447FCEEE1EBD999F00567F73 /* Story+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Story+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		44E5ED141EB4585A005D01BC /* MoodyDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodyDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44E5ED171EB4585A005D01BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44E5ED1C1EB4585A005D01BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,9 +70,12 @@
 		44E5ED161EB4585A005D01BC /* MoodyDiary */ = {
 			isa = PBXGroup;
 			children = (
+				447FCEED1EBD999F00567F73 /* Story+CoreDataClass.swift */,
+				447FCEEE1EBD999F00567F73 /* Story+CoreDataProperties.swift */,
 				44E5ED2C1EB4592A005D01BC /* StartViewController.swift */,
 				44E5ED171EB4585A005D01BC /* AppDelegate.swift */,
 				44E5ED1B1EB4585A005D01BC /* Main.storyboard */,
+				440BB9DA1EC6B0B20056B5F9 /* StoryDetailsViewController.swift */,
 				447FCEE81EBD90F600567F73 /* StoryTableViewCell.swift */,
 				447FCEE61EBD8F7300567F73 /* ReadViewController.swift */,
 				447FCEDA1EBD63D800567F73 /* WriteViewController.swift */,
@@ -152,11 +161,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				44E5ED201EB4585A005D01BC /* MoodyDiary.xcdatamodeld in Sources */,
+				447FCEEF1EBD999F00567F73 /* Story+CoreDataClass.swift in Sources */,
+				447FCEF01EBD999F00567F73 /* Story+CoreDataProperties.swift in Sources */,
 				44E5ED181EB4585A005D01BC /* AppDelegate.swift in Sources */,
 				44E5ED2D1EB4592A005D01BC /* StartViewController.swift in Sources */,
 				447FCEDB1EBD63D800567F73 /* WriteViewController.swift in Sources */,
 				447FCEE71EBD8F7300567F73 /* ReadViewController.swift in Sources */,
 				44E5ED2F1EB45AF5005D01BC /* MoodPickerView.swift in Sources */,
+				440BB9DB1EC6B0B20056B5F9 /* StoryDetailsViewController.swift in Sources */,
 				447FCEE91EBD90F600567F73 /* StoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

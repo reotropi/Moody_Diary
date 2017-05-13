@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
 class WriteViewController: UIViewController {
 
     var moodTemp = "";
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     @IBOutlet weak var moodTempLabel: UILabel!
+    
+    @IBOutlet weak var storyTextView: UITextView!
     
     
     override func viewDidLoad() {
@@ -30,7 +35,32 @@ class WriteViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func saveButtonPressed(_ sender: AnyObject) {
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let story_ = Story (context: context)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        
+        let strdate = dateFormatter.string(from: datePicker.date)
+        
+        
+        story_.date = strdate
+        story_.mood = moodTemp
+        story_.story = storyTextView.text
+        
+        
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        self.dismiss(animated: true, completion: nil)
+    }
 
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

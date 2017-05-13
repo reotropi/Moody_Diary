@@ -14,29 +14,77 @@ class ReadViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var readTable: UITableView!
     
-    var moodTemp = ""
+    var tempStoryClicked = "";
+    var tempDateClicked = "";
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var stories: [Story] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        moodLabel.text = moodTemp
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        getData()
+        readTable.reloadData()
+    }
+    
+    func getData() {
+        do {
+            stories = try context.fetch(Story.fetchRequest())
+        } catch {
+            print("Fetching Failed")
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return stories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = readTable.dequeueReusableCell(withIdentifier: "StoryCell") as! StoryTableViewCell
-        cell.storyLabel.text = "1"
+        
+        var stories_ = stories[indexPath.row]
+        if let moodnya = stories_.mood, let datenya = stories_.date {
+        cell.textLabel?.text = moodnya + " - " + datenya
+        }
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tempDateClicked = stories[indexPath.row].date!
+        tempStoryClicked = stories[indexPath.row].story!
+        performSegue(withIdentifier: "detailSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailSegue" {
+            let detail = segue.destination as! StoryDetailsViewController
+            detail.dateTemp = tempDateClicked
+            detail.storyTemp = tempStoryClicked
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let story = stories[indexPath.row]
+            context.delete(story)
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            
+            do {
+                stories = try context.fetch(Story.fetchRequest())
+            } catch {
+                print("Fetching Failed")
+            }
+        }
+        tableView.reloadData()
+    }
 
     /*
     // MARK: - Navigation

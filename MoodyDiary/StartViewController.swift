@@ -56,14 +56,15 @@ class StartViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
         a.moodTemp = moodPass
         }
             else {
-                let b = segue.destination as!ReadViewController
-                b.moodTemp = moodPass
+                segue.destination as! ReadViewController
             }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         moodPass = moodString[row]
     }
+    
+    
     
     
     /*
