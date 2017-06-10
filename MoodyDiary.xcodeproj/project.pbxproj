@@ -7,7 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440280FE1EEA94AB001D4F4B /* Angry.png in Resources */ = {isa = PBXBuildFile; fileRef = 440280F41EEA94AB001D4F4B /* Angry.png */; };
+		440280FF1EEA94AB001D4F4B /* Bored.png in Resources */ = {isa = PBXBuildFile; fileRef = 440280F51EEA94AB001D4F4B /* Bored.png */; };
+		440281001EEA94AB001D4F4B /* Confused.png in Resources */ = {isa = PBXBuildFile; fileRef = 440280F61EEA94AB001D4F4B /* Confused.png */; };
+		440281011EEA94AB001D4F4B /* Depressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 440280F71EEA94AB001D4F4B /* Depressed.png */; };
+		440281021EEA94AB001D4F4B /* Happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 440280F81EEA94AB001D4F4B /* Happy.png */; };
+		440281031EEA94AB001D4F4B /* In Love.png in Resources */ = {isa = PBXBuildFile; fileRef = 440280F91EEA94AB001D4F4B /* In Love.png */; };
+		440281041EEA94AB001D4F4B /* Proud.png in Resources */ = {isa = PBXBuildFile; fileRef = 440280FA1EEA94AB001D4F4B /* Proud.png */; };
+		440281051EEA94AB001D4F4B /* Sad.png in Resources */ = {isa = PBXBuildFile; fileRef = 440280FB1EEA94AB001D4F4B /* Sad.png */; };
+		440281061EEA94AB001D4F4B /* Shocked.png in Resources */ = {isa = PBXBuildFile; fileRef = 440280FC1EEA94AB001D4F4B /* Shocked.png */; };
+		440281071EEA94AB001D4F4B /* Tired.png in Resources */ = {isa = PBXBuildFile; fileRef = 440280FD1EEA94AB001D4F4B /* Tired.png */; };
 		440BB9DB1EC6B0B20056B5F9 /* StoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440BB9DA1EC6B0B20056B5F9 /* StoryDetailsViewController.swift */; };
+		441554051EEB7571007EFB4F /* theMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 441554041EEB7571007EFB4F /* theMusic.mp3 */; };
+		441554071EEB7768007EFB4F /* theMusic2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 441554061EEB7768007EFB4F /* theMusic2.mp3 */; };
 		447FCEDB1EBD63D800567F73 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FCEDA1EBD63D800567F73 /* WriteViewController.swift */; };
 		447FCEE71EBD8F7300567F73 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FCEE61EBD8F7300567F73 /* ReadViewController.swift */; };
 		447FCEE91EBD90F600567F73 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447FCEE81EBD90F600567F73 /* StoryTableViewCell.swift */; };
@@ -20,10 +32,23 @@
 		44E5ED251EB4585A005D01BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E5ED231EB4585A005D01BC /* LaunchScreen.storyboard */; };
 		44E5ED2D1EB4592A005D01BC /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ED2C1EB4592A005D01BC /* StartViewController.swift */; };
 		44E5ED2F1EB45AF5005D01BC /* MoodPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E5ED2E1EB45AF5005D01BC /* MoodPickerView.swift */; };
+		DCA59775E19A65A3D50068B8 /* Pods_MoodyDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C45D242468B33D935033100 /* Pods_MoodyDiary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		440280F41EEA94AB001D4F4B /* Angry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Angry.png; sourceTree = "<group>"; };
+		440280F51EEA94AB001D4F4B /* Bored.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bored.png; sourceTree = "<group>"; };
+		440280F61EEA94AB001D4F4B /* Confused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Confused.png; sourceTree = "<group>"; };
+		440280F71EEA94AB001D4F4B /* Depressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Depressed.png; sourceTree = "<group>"; };
+		440280F81EEA94AB001D4F4B /* Happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Happy.png; sourceTree = "<group>"; };
+		440280F91EEA94AB001D4F4B /* In Love.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "In Love.png"; sourceTree = "<group>"; };
+		440280FA1EEA94AB001D4F4B /* Proud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Proud.png; sourceTree = "<group>"; };
+		440280FB1EEA94AB001D4F4B /* Sad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sad.png; sourceTree = "<group>"; };
+		440280FC1EEA94AB001D4F4B /* Shocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shocked.png; sourceTree = "<group>"; };
+		440280FD1EEA94AB001D4F4B /* Tired.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tired.png; sourceTree = "<group>"; };
 		440BB9DA1EC6B0B20056B5F9 /* StoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryDetailsViewController.swift; sourceTree = "<group>"; };
+		441554041EEB7571007EFB4F /* theMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theMusic.mp3; sourceTree = "<group>"; };
+		441554061EEB7768007EFB4F /* theMusic2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theMusic2.mp3; sourceTree = "<group>"; };
 		447FCEDA1EBD63D800567F73 /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		447FCEE61EBD8F7300567F73 /* ReadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 		447FCEE81EBD90F600567F73 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -38,6 +63,9 @@
 		44E5ED261EB4585A005D01BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44E5ED2C1EB4592A005D01BC /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		44E5ED2E1EB45AF5005D01BC /* MoodPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodPickerView.swift; sourceTree = "<group>"; };
+		4AA467555D927C1971F02FD3 /* Pods-MoodyDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodyDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodyDiary/Pods-MoodyDiary.release.xcconfig"; sourceTree = "<group>"; };
+		8C45D242468B33D935033100 /* Pods_MoodyDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodyDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E983D91336DDA1B08CA17E6 /* Pods-MoodyDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodyDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodyDiary/Pods-MoodyDiary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,17 +73,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCA59775E19A65A3D50068B8 /* Pods_MoodyDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A417F959032CBF68EA55CF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C45D242468B33D935033100 /* Pods_MoodyDiary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		44E5ED0B1EB4585A005D01BC = {
 			isa = PBXGroup;
 			children = (
 				44E5ED161EB4585A005D01BC /* MoodyDiary */,
 				44E5ED151EB4585A005D01BC /* Products */,
+				BE01F178F96D2E45BECA24E4 /* Pods */,
+				0A417F959032CBF68EA55CF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,11 +120,32 @@
 				447FCEDA1EBD63D800567F73 /* WriteViewController.swift */,
 				44E5ED2E1EB45AF5005D01BC /* MoodPickerView.swift */,
 				44E5ED211EB4585A005D01BC /* Assets.xcassets */,
+				441554041EEB7571007EFB4F /* theMusic.mp3 */,
+				440280F41EEA94AB001D4F4B /* Angry.png */,
+				441554061EEB7768007EFB4F /* theMusic2.mp3 */,
+				440280F51EEA94AB001D4F4B /* Bored.png */,
+				440280F61EEA94AB001D4F4B /* Confused.png */,
+				440280F71EEA94AB001D4F4B /* Depressed.png */,
+				440280F81EEA94AB001D4F4B /* Happy.png */,
+				440280F91EEA94AB001D4F4B /* In Love.png */,
+				440280FA1EEA94AB001D4F4B /* Proud.png */,
+				440280FB1EEA94AB001D4F4B /* Sad.png */,
+				440280FC1EEA94AB001D4F4B /* Shocked.png */,
+				440280FD1EEA94AB001D4F4B /* Tired.png */,
 				44E5ED231EB4585A005D01BC /* LaunchScreen.storyboard */,
 				44E5ED261EB4585A005D01BC /* Info.plist */,
 				44E5ED1E1EB4585A005D01BC /* MoodyDiary.xcdatamodeld */,
 			);
 			path = MoodyDiary;
+			sourceTree = "<group>";
+		};
+		BE01F178F96D2E45BECA24E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E983D91336DDA1B08CA17E6 /* Pods-MoodyDiary.debug.xcconfig */,
+				4AA467555D927C1971F02FD3 /* Pods-MoodyDiary.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44E5ED291EB4585A005D01BC /* Build configuration list for PBXNativeTarget "MoodyDiary" */;
 			buildPhases = (
+				F89F339F9076F17041766A0F /* [CP] Check Pods Manifest.lock */,
 				44E5ED101EB4585A005D01BC /* Sources */,
 				44E5ED111EB4585A005D01BC /* Frameworks */,
 				44E5ED121EB4585A005D01BC /* Resources */,
+				4CA8ABF511046DC6FBA6D203 /* [CP] Embed Pods Frameworks */,
+				93E31E3E6BB335894757B1B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,12 +211,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				44E5ED251EB4585A005D01BC /* LaunchScreen.storyboard in Resources */,
+				440280FE1EEA94AB001D4F4B /* Angry.png in Resources */,
+				440281011EEA94AB001D4F4B /* Depressed.png in Resources */,
+				440281031EEA94AB001D4F4B /* In Love.png in Resources */,
+				440281041EEA94AB001D4F4B /* Proud.png in Resources */,
 				44E5ED221EB4585A005D01BC /* Assets.xcassets in Resources */,
+				440281071EEA94AB001D4F4B /* Tired.png in Resources */,
+				440280FF1EEA94AB001D4F4B /* Bored.png in Resources */,
+				440281061EEA94AB001D4F4B /* Shocked.png in Resources */,
+				441554071EEB7768007EFB4F /* theMusic2.mp3 in Resources */,
+				441554051EEB7571007EFB4F /* theMusic.mp3 in Resources */,
+				440281001EEA94AB001D4F4B /* Confused.png in Resources */,
+				440281051EEA94AB001D4F4B /* Sad.png in Resources */,
+				440281021EEA94AB001D4F4B /* Happy.png in Resources */,
 				44E5ED1D1EB4585A005D01BC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4CA8ABF511046DC6FBA6D203 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoodyDiary/Pods-MoodyDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93E31E3E6BB335894757B1B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoodyDiary/Pods-MoodyDiary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89F339F9076F17041766A0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44E5ED101EB4585A005D01BC /* Sources */ = {
@@ -290,6 +413,7 @@
 		};
 		44E5ED2A1EB4585A005D01BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E983D91336DDA1B08CA17E6 /* Pods-MoodyDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MoodyDiary/Info.plist;
@@ -302,6 +426,7 @@
 		};
 		44E5ED2B1EB4585A005D01BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AA467555D927C1971F02FD3 /* Pods-MoodyDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MoodyDiary/Info.plist;

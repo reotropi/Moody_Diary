@@ -7,16 +7,29 @@
 //
 
 import UIKit
+import ChameleonFramework
+import AVFoundation
 
 class StartViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var moodPicker: MoodPickerView!
     var moodPass = ""
+    var audioPlayer : AVAudioPlayer!
     
-    let moodString = ["Happy", "In Love", "Proud", "Bored", "Sad", "Broken", "Depressed"]
+    let moodString = ["Happy", "In Love", "Proud", "Bored", "Tired", "Sad", "Confused", "Angry", "Shocked", "Depressed"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let myAudioUrl = Bundle.main.url(forResource: "theMusic", withExtension: "mp3")!
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: myAudioUrl)
+        } catch {
+            print("cannot load file: \(myAudioUrl)")
+        }
+        
+        audioPlayer.currentTime = 0
+        audioPlayer.play()
         
         // Do any additional setup after loading the view.
     }
@@ -39,13 +52,13 @@ class StartViewController: UIViewController, UIPickerViewDataSource, UIPickerVie
     }
     
     @IBAction func writeButtonPressed(_ sender: AnyObject) {
-        
+        audioPlayer.stop()
         performSegue(withIdentifier: "writeSegue", sender: nil)
         
     }
     
     @IBAction func readButtonPressed(_ sender: AnyObject) {
-        
+        audioPlayer.stop()
         performSegue(withIdentifier: "readSegue", sender: nil)
         
     }

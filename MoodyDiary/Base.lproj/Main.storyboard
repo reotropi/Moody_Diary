@@ -159,7 +159,7 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="1iE-nB-zD8">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -174,7 +174,7 @@
                                     <action selector="backButtonPressed:" destination="CG6-1F-3fT" eventType="touchUpInside" id="9C1-PA-hHX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNq-sa-JHQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MoodTemp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNq-sa-JHQ">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="iBN-ma-QRG"/>
                                 </constraints>
@@ -182,13 +182,21 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Go-ck-n9R">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="7Vn-BL-JTy"/>
+                                    <constraint firstAttribute="height" constant="128" id="Mqd-ij-EhD"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.97132762459999999" green="0.95446724810000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yNq-sa-JHQ" firstAttribute="trailing" secondItem="eEj-Ii-hxx" secondAttribute="trailingMargin" id="6vY-si-jJ8"/>
                             <constraint firstItem="1iE-nB-zD8" firstAttribute="trailing" secondItem="eEj-Ii-hxx" secondAttribute="trailingMargin" id="78p-ho-WKI"/>
                             <constraint firstItem="yNq-sa-JHQ" firstAttribute="centerX" secondItem="eEj-Ii-hxx" secondAttribute="centerX" id="7nx-Dh-Npx"/>
-                            <constraint firstItem="tKh-gU-t83" firstAttribute="top" secondItem="1iE-nB-zD8" secondAttribute="bottom" constant="20" id="W7D-95-lk6"/>
+                            <constraint firstItem="8Go-ck-n9R" firstAttribute="centerX" secondItem="eEj-Ii-hxx" secondAttribute="centerX" id="D3B-IB-RiL"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="1iE-nB-zD8" secondAttribute="bottom" constant="155" id="WpD-XE-sau"/>
+                            <constraint firstItem="tKh-gU-t83" firstAttribute="top" secondItem="8Go-ck-n9R" secondAttribute="bottom" constant="19" id="Xos-XW-TIi"/>
                             <constraint firstItem="1iE-nB-zD8" firstAttribute="centerX" secondItem="eEj-Ii-hxx" secondAttribute="centerX" id="c4t-xU-nd9"/>
                             <constraint firstItem="Ujj-2L-eZE" firstAttribute="leading" secondItem="eEj-Ii-hxx" secondAttribute="leadingMargin" id="eE8-VG-DhF"/>
                             <constraint firstItem="yNq-sa-JHQ" firstAttribute="centerX" secondItem="eEj-Ii-hxx" secondAttribute="centerX" id="ift-YG-nzo"/>
@@ -203,7 +211,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="Ujj-2L-eZE" id="LXB-K7-76h"/>
                         <outlet property="dateLabel" destination="yNq-sa-JHQ" id="e29-HT-Nje"/>
+                        <outlet property="imageBottomLayout" destination="Xos-XW-TIi" id="Alh-Vo-Psq"/>
+                        <outlet property="moodImage" destination="8Go-ck-n9R" id="JUV-SO-0J3"/>
                         <outlet property="storyLabel" destination="1iE-nB-zD8" id="xP6-AB-3Lm"/>
                     </connections>
                 </viewController>
@@ -245,7 +256,7 @@
                                     <constraint firstAttribute="height" constant="30" id="WEu-LR-htA"/>
                                 </constraints>
                                 <state key="normal" title="SAVE">
-                                    <color key="titleColor" red="1" green="0.42536565749999999" blue="0.93344376650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="1" green="0.45649902889999999" blue="0.070161430499999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="saveButtonPressed:" destination="Exu-9X-Mhy" eventType="touchUpInside" id="Gyr-ot-9tK"/>
@@ -268,7 +279,7 @@
                                     <constraint firstAttribute="width" constant="206" id="NBd-AU-NPD"/>
                                     <constraint firstAttribute="height" constant="52" id="Pcb-gm-BVU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="30"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -308,7 +319,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="264-hf-iTY" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8xQ-oE-35g">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8xQ-oE-35g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

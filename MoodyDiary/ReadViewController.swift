@@ -10,12 +10,12 @@ import UIKit
 
 class ReadViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var moodLabel: UILabel!
     
     @IBOutlet weak var readTable: UITableView!
     
     var tempStoryClicked = "";
     var tempDateClicked = "";
+    var tempMoodClicked = "";
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var stories: [Story] = []
@@ -60,6 +60,7 @@ class ReadViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tempDateClicked = stories[indexPath.row].date!
         tempStoryClicked = stories[indexPath.row].story!
+        tempMoodClicked = stories[indexPath.row].mood!
         performSegue(withIdentifier: "detailSegue", sender: nil)
     }
     
@@ -68,6 +69,7 @@ class ReadViewController: UIViewController, UITableViewDelegate, UITableViewData
             let detail = segue.destination as! StoryDetailsViewController
             detail.dateTemp = tempDateClicked
             detail.storyTemp = tempStoryClicked
+            detail.moodTemp = tempMoodClicked
         }
     }
     

@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import ChameleonFramework
+import AVFoundation
 
 class WriteViewController: UIViewController {
 
@@ -18,11 +20,91 @@ class WriteViewController: UIViewController {
     @IBOutlet weak var moodTempLabel: UILabel!
     
     @IBOutlet weak var storyTextView: UITextView!
+ 
+    var audioPlayer : AVAudioPlayer!
     
+    func chooseColor(){
+        
+        if moodTemp == "Happy" {
+            
+            view.backgroundColor = UIColor.flatYellow().lighten(byPercentage: 80)
+            
+        }
+            
+        else if moodTemp == "Angry" {
+            
+            view.backgroundColor = UIColor.flatRed().lighten(byPercentage: 80)
+            
+        }
+            
+        else if moodTemp == "Confused" {
+            
+            view.backgroundColor = UIColor.cyan.lighten(byPercentage: 80)
+            
+        }
+            
+            
+        else if moodTemp == "Depressed" {
+            
+            view.backgroundColor = UIColor.gray.lighten(byPercentage: 80)
+            
+        }
+            
+        else if moodTemp == "Bored" {
+            
+            view.backgroundColor = UIColor.flatLime().lighten(byPercentage: 80)
+            
+        }
+            
+        else if moodTemp == "In Love" {
+            
+            view.backgroundColor = UIColor.flatPink().lighten(byPercentage: 80)
+            
+        }
+            
+            
+        else if moodTemp == "Proud" {
+            
+            view.backgroundColor = UIColor.blue.lighten(byPercentage: 80)
+            
+        }
+            
+        else if moodTemp == "Sad" {
+            
+            view.backgroundColor = UIColor.darkGray.lighten(byPercentage: 80)
+            
+        }
+            
+        else if moodTemp == "Shocked" {
+            
+            view.backgroundColor = UIColor.red.lighten(byPercentage: 80)
+            
+        }
+            
+        else if moodTemp == "Tired" {
+            
+            view.backgroundColor = UIColor.flatGreen().lighten(byPercentage: 80)
+            
+        }
+        
+    }
     
     override func viewDidLoad() {
+        chooseColor()
         super.viewDidLoad()
         moodTempLabel.text = moodTemp
+        
+        
+        let myAudioUrl = Bundle.main.url(forResource: "theMusic2", withExtension: "mp3")!
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: myAudioUrl)
+        } catch {
+            print("cannot load file: \(myAudioUrl)")
+        }
+        
+        audioPlayer.currentTime = 0
+        audioPlayer.play()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -33,6 +115,7 @@ class WriteViewController: UIViewController {
     
     
     @IBAction func backButtonPressed(_ sender: AnyObject) {
+        audioPlayer.stop()
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -51,14 +134,12 @@ class WriteViewController: UIViewController {
         story_.mood = moodTemp
         story_.story = storyTextView.text
         
+        audioPlayer.stop()
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
         self.dismiss(animated: true, completion: nil)
     }
-
-    
-    
     
     
     /*
