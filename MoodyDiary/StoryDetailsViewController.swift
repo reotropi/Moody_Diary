@@ -9,6 +9,7 @@
 import UIKit
 import ChameleonFramework
 import AVFoundation
+import SVProgressHUD
 
 class StoryDetailsViewController: UIViewController {
 
@@ -110,9 +111,12 @@ class StoryDetailsViewController: UIViewController {
         audioPlayer.play()
         
         super.viewDidLoad()
+        
+        SVProgressHUD.show()
         imageBottomLayout.constant = -148
         dateLabel.text = dateTemp
         storyLabel.text = storyTemp
+        SVProgressHUD.dismiss(withDelay: 3)
         
         var title = moodTemp + ".png"
         
